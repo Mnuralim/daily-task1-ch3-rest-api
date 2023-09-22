@@ -261,37 +261,4 @@ userRouter.route("/:id").get(getUserById).patch(updateUser).delete(deleteUser);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/tours", tourRouter);
 
-// app.route("/api/v1/tours").get(getAllTours).post(createTour);
-
-// app
-//   .route("/api/v1/tours/:id")
-//   .get(getTourById)
-//   .patch(updateTour)
-//   .delete(deleteTour);
-
-// const createUsers = (req, res) => {
-//   const newId = tours[tours.length - 1].id + 1;
-//   const newData = Object.assign(
-//     {
-//       id: newId,
-//     },
-//     req.body
-//   );
-//   tours.push(newData);
-//   fs.writeFile(
-//     `${__dirname}/dev-data/data/tours-simple.json`,
-//     JSON.stringify(tours),
-//     (err) => {
-//       res.status(201).json({
-//         status: "success",
-//         data: {
-//           tour: newData,
-//         },
-//       });
-//     }
-//   );
-// };
-
-// app.route("/api/v1/users").get(getAllUsers);
-
 app.listen(port, () => console.log(`Server is running on port ${port}`));
